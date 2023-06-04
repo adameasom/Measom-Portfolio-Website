@@ -16,10 +16,19 @@ main {
     flex-direction: column;
 }
 
+h1 {
+    font-size: 7vw;
+}
+
+h2 {
+    font-size: 4vw;
+}
+
 /* Nav Bar */
 .nav-container {
     background-color: rgba(255,255,255,0.9);
     width: 100vw;
+    height: 100px;
     display: grid;
     padding: 0 50px;
     position: fixed;
@@ -87,7 +96,7 @@ main {
 /* Fixed Social Sidebar (Left) */
 .sidebar-left {
     position: fixed;
-    top: 75px;
+    top: 80px;
     left: 90px;
 }
 
@@ -119,4 +128,14 @@ main {
     height: 70px;
     background: #000;
     margin-left: 10px;
+}
+
+/* Hero Section */
+header {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding-top: 100px;
 }
