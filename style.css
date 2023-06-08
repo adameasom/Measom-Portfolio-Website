@@ -15,6 +15,11 @@ html {
 main {
     display: flex;
     flex-direction: column;
+    margin: 0 200px;
+}
+
+section {
+    padding-top: 29px;
 }
 
 h1 {
@@ -149,25 +154,54 @@ header {
     transition: 0.5s;
 }
 
-.heading-name:hover {
+.heading-name:hover  {
     font-size: 7vw;
-    transform: (0, -40px);
 }
 
 .tag-1:hover {
     color: rgb(255, 132, 0);
     font-size: 3vw;
-    transform: (-20px, 0);
 }
 
 .tag-2:hover {
     color: rgb(255, 132, 0);
     font-size: 5vw;
-    transform: (0, 10px);
 }
 
 .tag-3:hover {
     color: rgb(255, 132, 0);
     font-size: 12vw;
-    transform: (30px, 0);
+}
+
+/* Skills Section */
+.skills-block {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 20px 0;
+    gap: 5vw;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-item svg {
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.skill-item h4 {
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.skill-item:hover h4 {
+    color: rgb(0, 0, 0);
+    transform: translate(0, -10px);
 }
