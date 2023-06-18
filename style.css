@@ -18,16 +18,16 @@ main {
     margin: 0 200px;
 }
 
-section {
-    padding-top: 29px;
-}
-
 h1 {
     font-size: 6vw;
 }
 
 h2 {
     font-size: 4vw;
+}
+
+h3 {
+    font-size: 3rem;
 }
 
 /* Nav Bar */
@@ -148,10 +148,12 @@ header {
     align-items: center;
     min-height: 100vh;
     padding-top: 100px;
+    position: relative;
+    top: -70px;
 }
 
 .heading-name, .tag-1, .tag-2, .tag-3 {
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .heading-name:hover  {
@@ -192,16 +194,20 @@ header {
     width: 50px;
     margin-left: 10px;
     margin-right: 10px;
+    transition: 0.5s;
 }
 
 .skill-item h4 {
     color: rgb(255, 255, 255);
-    margin-top: 20px;
     margin-bottom: 10px;
     transition: 0.5s;
 }
 
 .skill-item:hover h4 {
     color: rgb(0, 0, 0);
-    transform: translate(0, -10px);
+    transform: translate(0, -25px);
+}
+
+.skill-item:hover svg {
+    opacity: 0.3;
 }
