@@ -12,6 +12,10 @@ html {
     cursor: crosshair;
 }
 
+body {
+    margin-bottom: 50px;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -19,11 +23,11 @@ main {
 }
 
 h1 {
-    font-size: 6vw;
+    font-size: 6rem;
 }
 
 h2 {
-    font-size: 4vw;
+    font-size: 4rem;
 }
 
 h3 {
@@ -42,14 +46,13 @@ h3 {
 
 .navbar {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
 .logo {
     font-size: 4rem;
     font-weight: 800;
-    margin-bottom: 10px;
 }
 
 .logo-link {
@@ -60,14 +63,13 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 10px;
+    margin-top: 30px;
     font-size: 1.5rem;
 }
 
 .nav-button {
     position: relative;
     top: 20px;
-    background-color: rgba(255, 255, 255, 1.0);
     border: 2px solid rgba(0, 0, 0, 1.0);
     border-radius: 4px;
     padding: 0.5rem 1rem;
@@ -106,7 +108,7 @@ h3 {
 /* Fixed Social Sidebar (Left) */
 .sidebar-left {
     position: fixed;
-    top: 95px;
+    bottom: 10px;
     left: 70px;
 }
 
@@ -117,8 +119,8 @@ h3 {
 
 .social-sidebar svg {
     width: 20px;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     transition: 0.5s;
 }
 
@@ -138,9 +140,7 @@ header {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding-top: 100px;
     position: relative;
-    top: -70px;
 }
 
 .heading-name, .tag-1, .tag-2, .tag-3 {
@@ -167,11 +167,18 @@ header {
 }
 
 /* Skills Section */
+#Skills {
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+    border-radius: 4px;
+
+}
+
 .skills-block {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
-    margin: 20px 0;
+    margin-top: 20px;
     gap: 5vw;
 }
 
@@ -189,8 +196,7 @@ header {
 }
 
 .skill-item h4 {
-    color: rgb(255, 255, 255);
-    margin-bottom: 10px;
+    color: rgb(245, 245, 245);
     transition: 0.5s;
 }
 
