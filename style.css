@@ -117,8 +117,8 @@ h3 {
 
 .social-sidebar svg {
     width: 20px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     transition: 0.5s;
 }
 
@@ -129,15 +129,6 @@ h3 {
 
 .social-sidebar:hover svg {
     opacity: 0.3;
-}
-
-.social-sidebar::before {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 70px;
-    background: #000;
-    margin-left: 10px;
 }
 
 /* Hero Section */
