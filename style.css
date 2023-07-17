@@ -22,16 +22,28 @@ main {
     margin: 0 200px;
 }
 
+section {
+    padding: 20px;
+}
+
 h1 {
-    font-size: 6rem;
+    font-size: 7rem;
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 3.5rem;
+}
+
+h5 {
+    font-size: 1rem;
 }
 
 /* Nav Bar */
@@ -71,7 +83,7 @@ h3 {
     position: relative;
     top: 20px;
     border: 2px solid rgba(0, 0, 0, 1.0);
-    border-radius: 4px;
+    border-radius: 6px;
     padding: 0.5rem 1rem;
     font-weight: 600;
 }
@@ -108,7 +120,7 @@ h3 {
 /* Fixed Social Sidebar (Left) */
 .sidebar-left {
     position: fixed;
-    bottom: 10px;
+    bottom: 20px;
     left: 70px;
 }
 
@@ -143,12 +155,8 @@ header {
     position: relative;
 }
 
-.heading-name, .tag-1, .tag-2, .tag-3 {
+.tag-1, .tag-2, .tag-3 {
     transition: 1s;
-}
-
-.heading-name:hover  {
-    font-size: 7vw;
 }
 
 .tag-1:hover {
@@ -166,11 +174,19 @@ header {
     font-size: 12vw;
 }
 
+/* About Section */
+#About {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
 /* Skills Section */
 #Skills {
     background-color: rgb(245, 245, 245);
-    padding: 20px;
-    border-radius: 4px;
+    border-radius: 5px;
 
 }
 
@@ -195,12 +211,12 @@ header {
     transition: 0.5s;
 }
 
-.skill-item h4 {
+.skill-item h5 {
     color: rgb(245, 245, 245);
     transition: 0.5s;
 }
 
-.skill-item:hover h4 {
+.skill-item:hover h5 {
     color: rgb(0, 0, 0);
     transform: translate(0, -25px);
 }
