@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Urbanist', sans-serif;
-    color: rgba(0, 0, 0, 1.0);
+    color: rgb(233, 215, 179);
 }
 
 html {
@@ -13,17 +13,17 @@ html {
 }
 
 body {
+    background-color: rgb(29, 26, 52);
     margin-bottom: 50px;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    margin: 0 200px;
 }
 
 section {
-    padding: 20px;
+    padding: 30px 20px 50px 20px;
 }
 
 h1 {
@@ -32,10 +32,12 @@ h1 {
 
 h2 {
     font-size: 3.5rem;
+    font-weight: 400;
 }
 
 h3 {
     font-size: 1.5rem;
+    font-weight: 300;
 }
 
 h4 {
@@ -46,6 +48,10 @@ h5 {
     font-size: 1rem;
 }
 
+.margin {
+    margin: 0 200px;
+}
+
 /* Nav Bar */
 .nav-container {
     width: 100vw;
@@ -54,6 +60,7 @@ h5 {
     padding: 0 30px;
     position: fixed;
     top: 0;
+    z-index: 100;
 }
 
 .navbar {
@@ -82,7 +89,7 @@ h5 {
 .nav-button {
     position: relative;
     top: 20px;
-    border: 2px solid rgba(0, 0, 0, 1.0);
+    border: 2px solid rgb(233, 215, 179);
     border-radius: 6px;
     padding: 0.5rem 1rem;
     font-weight: 600;
@@ -117,11 +124,16 @@ h5 {
     opacity: 1;
 }
 
+.nav-button:hover {
+    background-color: rgb(76, 72, 97);
+}
+
 /* Fixed Social Sidebar (Left) */
 .sidebar-left {
     position: fixed;
     bottom: 20px;
     left: 70px;
+    z-index: 99;
 }
 
 .social-sidebar li {
@@ -131,6 +143,7 @@ h5 {
 
 .social-sidebar svg {
     width: 20px;
+    fill: rgb(233, 215, 179);
     margin-top: 8px;
     margin-bottom: 8px;
     transition: 0.5s;
@@ -139,6 +152,7 @@ h5 {
 .social-sidebar:hover svg:hover {
     transform: translate(0, -5px);
     opacity: 1;
+    fill: rgb(255, 132, 0);
 }
 
 .social-sidebar:hover svg {
@@ -147,31 +161,26 @@ h5 {
 
 /* Hero Section */
 header {
-    margin: 0 200px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     position: relative;
 }
 
-.tag-1, .tag-2, .tag-3 {
+.tag {
     transition: 1s;
 }
 
-.tag-1:hover {
+.tag:hover {
     color: rgb(255, 132, 0);
-    font-size: 3vw;
+    font-size: 2.5rem;
 }
 
-.tag-2:hover {
-    color: rgb(255, 132, 0);
-    font-size: 5vw;
-}
-
-.tag-3:hover {
-    color: rgb(255, 132, 0);
-    font-size: 12vw;
+.down-arrow {
+    position: absolute;
+    bottom: 47px;
 }
 
 /* About Section */
@@ -184,18 +193,13 @@ header {
 }
 
 /* Skills Section */
-#Skills {
-    background-color: rgb(245, 245, 245);
-    border-radius: 5px;
-
-}
-
 .skills-block {
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    margin-top: 20px;
-    gap: 5vw;
+    margin-top: 30px;
+    gap: 1vw;
 }
 
 .skill-item {
@@ -206,21 +210,113 @@ header {
 
 .skill-item svg {
     width: 50px;
+    fill: rgb(233, 215, 179);
     margin-left: 10px;
     margin-right: 10px;
     transition: 0.5s;
 }
 
 .skill-item h5 {
-    color: rgb(245, 245, 245);
+    color: rgb(29, 26, 52);
     transition: 0.5s;
 }
 
 .skill-item:hover h5 {
-    color: rgb(0, 0, 0);
+    color: rgb(233, 215, 179);
     transform: translate(0, -25px);
 }
 
 .skill-item:hover svg {
-    opacity: 0.3;
+    opacity: 0.1;
+}
+
+/* Projects Section */
+#Projects {
+    padding: unset;
+    padding: 30px 0;
+}
+
+#Projects h3 {
+    padding: 0 20px;
+}
+
+.projects-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.projects-item {
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.projects-img {
+    width: 50%;
+    overflow-y: scroll;
+    aspect-ratio: 16 / 9;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+.projects-img img {
+    width: 100%;
+}
+
+.left {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transform: translate(-30px, 0);
+}
+
+.right {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    transform: translate(30px, 0);
+}
+
+.projects-text-block {
+    width: 50%;
+    aspect-ratio: 16 /9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-textbox {
+    width: 70%;
+    text-align: left;
+}
+
+.projects-textbox svg  {
+    margin-right: 70px;
+    margin-bottom: 20px;
+    opacity: 0.4;
+}
+
+.projects-textbox a svg {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.projects-img:hover {
+    opacity: 0.9;
+    transform: translate(0, 0);
+}
+
+.projects-textbox a svg:hover {
+    transform: translate(0, -5px);
 }
