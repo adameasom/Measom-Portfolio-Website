@@ -14,7 +14,6 @@ html {
 
 body {
     background-color: rgb(29, 26, 52);
-    margin-bottom: 50px;
 }
 
 main {
@@ -23,7 +22,7 @@ main {
 }
 
 section {
-    padding: 30px 20px 50px 20px;
+    padding: 30px 0px 0px 0px;
 }
 
 h1 {
@@ -42,10 +41,15 @@ h3 {
 
 h4 {
     font-size: 3.5rem;
+    font-weight: 400;
 }
 
 h5 {
     font-size: 1rem;
+}
+
+p {
+    font-weight: 100;
 }
 
 .margin {
@@ -86,13 +90,21 @@ h5 {
     font-size: 1.5rem;
 }
 
-.nav-button {
-    position: relative;
-    top: 20px;
+.button-1 {
     border: 2px solid rgb(233, 215, 179);
     border-radius: 6px;
     padding: 0.5rem 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
+    text-transform: lowercase;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.nav-button {
+    position: relative;
+    top: 20px;
+    margin-top: 30px;
 }
 
 .nav-links a {
@@ -120,11 +132,11 @@ h5 {
     opacity: 1;
 }
 
-.nav-links:hover .nav-button {
+.nav-links:hover .button-1 {
     opacity: 1;
 }
 
-.nav-button:hover {
+.button-1:hover {
     background-color: rgb(76, 72, 97);
 }
 
@@ -197,9 +209,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin-top: 30px;
-    gap: 1vw;
+    gap: 3vw;
 }
 
 .skill-item {
@@ -209,10 +221,8 @@ header {
 }
 
 .skill-item svg {
-    width: 50px;
+    width: 100px;
     fill: rgb(233, 215, 179);
-    margin-left: 10px;
-    margin-right: 10px;
     transition: 0.5s;
 }
 
@@ -223,7 +233,7 @@ header {
 
 .skill-item:hover h5 {
     color: rgb(233, 215, 179);
-    transform: translate(0, -25px);
+    transform: translate(0, -43px);
 }
 
 .skill-item:hover svg {
@@ -231,15 +241,6 @@ header {
 }
 
 /* Projects Section */
-#Projects {
-    padding: unset;
-    padding: 30px 0;
-}
-
-#Projects h3 {
-    padding: 0 20px;
-}
-
 .projects-block {
     width: 100%;
     display: flex;
@@ -287,7 +288,7 @@ header {
 }
 
 .projects-text-block {
-    width: 50%;
+    width: 45%;
     aspect-ratio: 16 /9;
     display: flex;
     align-items: center;
@@ -319,4 +320,37 @@ header {
 
 .projects-textbox a svg:hover {
     transform: translate(0, -5px);
+}
+
+/* Let's Work Together Section */
+#main-contact {
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+    overflow-y: hidden;
+}
+
+.main-contact-block {
+    display: flex;
+    flex-direction: column;
+    width: 77%;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 200px;
+    border: 2px solid rgb(233, 215, 179);
+    border-bottom: unset;
+    border-radius: 10px 10px 0 0;
+    transition: 0.5s;
+    transform: translate(0, 30px);
+    
+}
+
+.main-contact-block p {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.main-contact-block:hover {
+    transform: translate(0, 0);
 }
