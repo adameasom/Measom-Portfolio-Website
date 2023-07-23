@@ -28,7 +28,7 @@ section {
 }
 
 h1 {
-    font-size: 7rem;
+    font-size: clamp(3rem, 9vw, 15rem)
 }
 
 h2 {
@@ -42,7 +42,7 @@ h3 {
 }
 
 h4 {
-    font-size: 3.5rem;
+    font-size: 1.8rem;
     font-weight: 400;
 }
 
@@ -52,6 +52,7 @@ h5 {
 
 p {
     font-weight: 100;
+    letter-spacing: 0.1rem;
 }
 
 .margin {
@@ -74,6 +75,8 @@ p {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    height: 0;
+    overflow-y: visible;
 }
 
 .logo {
@@ -184,13 +187,20 @@ header {
     position: relative;
 }
 
-.tag {
-    transition: 1s;
+.tag-box {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
-.tag:hover {
+.tag-2 {
+    color: rgb(29, 26, 52);
+    transition: 2s;
+}
+
+.tag-box:hover .tag-2 {
     color: rgb(255, 132, 0);
-    font-size: 2.5rem;
+    transition: 0.5s;
 }
 
 .down-arrow {
@@ -205,6 +215,16 @@ header {
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
+}
+
+#About p {
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: unset;
+}
+
+#About span {
+    color: rgb(255, 132, 0);
 }
 
 /* Skills Section */
@@ -316,7 +336,9 @@ header {
 }
 
 .projects-textbox ul {
-    padding-left: 30px;
+    padding-left: 50px;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
 }
 
 .projects-links {
@@ -354,7 +376,7 @@ header {
     width: 77%;
     justify-content: center;
     align-items: center;
-    padding: 40px 200px;
+    padding: 40px 250px;
     border: 2px solid rgb(233, 215, 179);
     border-bottom: unset;
     border-radius: 10px 10px 0 0;
@@ -381,6 +403,7 @@ header {
     align-items: center;
     min-height: 100vh;
     position: relative;
+    margin: unset;
 }
     
 .contact-form-block h2 {
@@ -427,6 +450,10 @@ header {
     align-self: center;
     height: 50px;
     cursor: pointer;
+}
+
+.contact-submit {
+    transition: 0.5s;
 }
 
 .contact-submit:hover {
