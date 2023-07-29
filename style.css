@@ -274,7 +274,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100dvh;
     position: relative;
 }
 
@@ -304,7 +304,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .about-block {
@@ -376,6 +376,18 @@ header {
 @media only screen and (max-width:630px) {
     .skills {
         padding-top: 50px;
+    }
+    .skill-item h5 {
+        color: rgb(233, 215, 179);
+        font-weight: 200;
+        transition: unset;
+    }
+    .skill-item:hover h5 {
+        transform: unset;
+    }
+    
+    .skill-item:hover svg {
+        opacity: unset;
     }
 }
 
@@ -510,6 +522,19 @@ header {
     }
     .projects-textbox {
         width: 90%;
+    }
+    .projects-links {
+        align-items: center;
+    }
+    .projects-links a {
+        padding-bottom: 3px;
+        border-bottom: 2px solid rgb(233, 215, 179);
+    }
+    .projects-links svg {
+        transition: unset;
+    }
+    .projects-textbox a svg:hover {
+        transform: unset;
     }
 }
 
