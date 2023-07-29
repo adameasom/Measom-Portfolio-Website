@@ -21,28 +21,22 @@ main {
     flex-direction: column;
 }
 
-section {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 30px 0px 0px 0px;
-}
-
 h1 {
-    font-size: clamp(3rem, 9vw, 15rem)
+    font-size: clamp(2.4rem, 9vw, 15rem);
 }
 
 h2 {
-    font-size: 3.5rem;
+    font-size: clamp(1rem, 4vw, 7rem);
     font-weight: 400;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: clamp(0.8rem, 1.7vw, 3rem);
     font-weight: 300;
 }
 
 h4 {
-    font-size: 1.8rem;
+    font-size: clamp(2rem, 2vw, 4rem);
     font-weight: 400;
 }
 
@@ -55,17 +49,27 @@ p {
     letter-spacing: 0.1rem;
 }
 
-.margin {
-    margin-left: 200px;
-    margin-right: 200px;
+.width {
+    width: 77%;
+}
+
+@media only screen and (max-width: 630px) {
+    .width {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 631px) and (max-width: 950px) {
+    .width {
+        width: 68%;
+    }
 }
 
 /* Nav Bar */
 .nav-container {
     width: 100vw;
     display: grid;
-    align-items: flex-start;
-    padding: 0 30px;
+    align-items: flex-start; 
     position: fixed;
     top: 0;
     z-index: 100;
@@ -75,8 +79,10 @@ p {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    padding: 0 30px;
     height: 0;
     overflow-y: visible;
+    
 }
 
 .logo {
@@ -122,6 +128,7 @@ p {
 .nav-links a:not(:last-child) {
     margin-right: 5px;
 }
+
 .nav-links a:link {
     text-decoration: none;
 }
@@ -146,12 +153,71 @@ p {
     background-color: rgb(76, 72, 97);
 }
 
+@media only screen and (max-width: 630px) {
+    .navbar {
+        background-color: rgb(29, 26, 52);
+        height: 52px;
+        overflow-y: unset;
+    }
+    .nav-links {
+        flex-direction: row;
+    }
+    .nav-links, .button-1 {
+        font-size: 0.8rem;
+    }
+    .button-1 {
+        padding: 0.3rem 0.8rem;
+    }
+    .nav-button {
+        top: 0px;
+    }
+    .nav-links a:not(:last-child) {
+        margin-right: 10px;
+    }
+    .nav-links:hover a:hover {
+        transform: unset;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .navbar {
+        padding: 5px 10px 0 10px;
+    }
+    .logo {
+        font-size: 2rem;
+    }
+    .nav-links, .button-1 {
+        font-size: 1rem;
+    }
+    .nav-links {
+        margin-top: 12px;
+    }
+}
+
+@media only screen and (min-width: 631px) and (max-width: 1200px) {
+    .navbar {
+        padding: 0 20px;
+    }
+    .logo {
+        font-size: 3rem;
+    }
+    .nav-links, .button-1 {
+        font-size: 1rem;
+    }
+    .nav-links {
+        margin-top: 20px;
+    }
+}
+
 /* Fixed Social Sidebar (Left) */
 .sidebar-left {
     position: fixed;
     bottom: 20px;
-    left: 70px;
+    left: 60px;
     z-index: 99;
+    background-color: rgb(29, 26, 52);
+    padding: 0 10px;
+    border-radius: 25px;
 }
 
 .social-sidebar li {
@@ -175,6 +241,31 @@ p {
 
 .social-sidebar:hover svg {
     opacity: 0.3;
+}
+
+@media only screen and (max-width: 630px) {
+    .sidebar-left {
+        padding: 3px 0;
+        bottom: 10px;
+        left: calc(50% - 90px); 
+    }
+    .social-sidebar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .social-sidebar svg {
+        margin: 0 20px;
+    }
+    .social-sidebar:hover svg:hover {
+        transform: unset;
+    }
+}
+
+@media only screen and (min-width: 631px) and (max-width: 1200px) {
+    .sidebar-left {
+        left: 40px;
+    }
 }
 
 /* Hero Section */
@@ -203,44 +294,57 @@ header {
     transition: 0.5s;
 }
 
-.down-arrow {
+.down-arrow-box {
     position: absolute;
-    bottom: 47px;
+    bottom: 93px;
 }
 
 /* About Section */
 #About {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     min-height: 100vh;
 }
 
-#About p {
-    font-size: 3.5rem;
+.about-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-block p {
+    font-size: clamp(1rem, 4vw, 7rem);
     font-weight: 500;
     letter-spacing: unset;
 }
 
-#About span {
+.about-block span {
     color: rgb(255, 132, 0);
 }
 
 /* Skills Section */
 #Skills {
-    border-top: 2px solid rgb(233, 215, 179);
-    border-bottom: 2px solid rgb(233, 215, 179);
-    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
 }
 
-.skills-block {
+.skills {
+    margin-bottom: 30px;
+    padding: 30px 0px;
+    border-top: 2px solid rgb(233, 215, 179);
+    border-bottom: 2px solid rgb(233, 215, 179);
+}
+
+.skills-box {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 30px;
-    gap: 3vw;
+    gap: 2vw;
 }
 
 .skill-item {
@@ -269,7 +373,25 @@ header {
     opacity: 0.1;
 }
 
+@media only screen and (max-width:630px) {
+    .skills {
+        padding-top: 50px;
+    }
+}
+
+@media only screen and (min-width:631px) and (max-width: 1200px) {
+    .skills {
+        padding-top: 20px;
+    }
+}
+
 /* Projects Section */
+.projects-heading {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
 .projects-block {
     width: 100%;
     display: flex;
@@ -318,7 +440,7 @@ header {
 
 .projects-text-block {
     width: 45%;
-    aspect-ratio: 16 /9;
+    aspect-ratio: 16/9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -329,14 +451,9 @@ header {
     text-align: left;
 }
 
-.projects-textbox .program  {
-    margin-right: 70px;
-    margin-bottom: 20px;
-    opacity: 0.4;
-}
 
 .projects-textbox ul {
-    padding-left: 50px;
+    padding-left: 40px;
     font-weight: 100;
     letter-spacing: 0.1rem;
 }
@@ -344,12 +461,25 @@ header {
 .projects-links {
     display: flex;
     flex-direction: row;
+    align-items: baseline;
     gap: 30px;
 }
 
 .projects-links svg {
     transition: 0.5s;
 }
+
+.program-box {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 20px;
+}
+
+.program  {
+    opacity: 0.4;
+}
+
 
 .projects-img:hover {
     opacity: 1;
@@ -358,6 +488,47 @@ header {
 
 .projects-textbox a svg:hover {
     transform: translate(0, -5px);
+}
+
+@media only screen and (max-width: 620px) {
+    .projects-heading {
+        padding-top: 50px;
+    }
+    .projects-item {
+        flex-direction: column-reverse;
+    }
+    .projects-img {
+        aspect-ratio: 16/9;
+        width: 300px;
+        height: auto;
+    }
+    .right {
+        align-self: flex-end;
+    }
+    .projects-text-block {
+        width: 100%;
+    }
+    .projects-textbox {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 631px) and (max-width: 768px) {
+    .projects-img {
+        aspect-ratio: 9/16;
+    }
+    .projects-text-block {
+        width: 50%;
+    }
+    .projects-textbox {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width:631px) and (max-width: 1200px) {
+    .projects-heading {
+        padding-top: 20px;
+    }
 }
 
 /* Let's Work Together Section */
@@ -386,13 +557,27 @@ header {
 }
 
 .main-contact-block p {
-    font-size: 2rem;
+    font-size: clamp(1rem, 2.23vw, 4rem);
     text-align: center;
     margin-top: 30px;
 }
 
 .main-contact-block:hover {
     transform: translate(0, 0);
+}
+
+@media only screen and (max-width: 630px) {
+    .main-contact-block {
+        width: 80%;
+        padding: 40px 20px 100px 20px;
+    }
+}
+
+@media only screen and (min-width: 631px) and (max-width: 768px) {
+    .main-contact-block {
+        width: 68%;
+        padding: 40px;
+    }
 }
 
 /* Contact Section */
@@ -415,7 +600,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    width: 42%;
     margin-top: 30px;
 }
 
@@ -459,4 +644,16 @@ header {
 .contact-submit:hover {
     background-color: rgb(76, 72, 97);
     transition: 0.5s;
+}
+
+@media only screen and (max-width: 425px) {
+    .contact-form {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .contact-form {
+        width: 60%;
+    }
 }
