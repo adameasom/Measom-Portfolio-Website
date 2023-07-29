@@ -598,10 +598,10 @@ header {
     }
 }
 
-@media only screen and (min-width: 631px) and (max-width: 1024px) {
+@media only screen and (min-width: 631px) and (max-width: 1640px) {
     .main-contact-block {
         width: 68%;
-        padding: 40px;
+        padding: 40px 20px 100px 20px;
     }
 }
 
