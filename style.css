@@ -539,9 +539,6 @@ header {
 }
 
 @media only screen and (min-width: 631px) and (max-width: 768px) {
-    .projects-item {
-        height: 500px;
-    }
     .projects-img {
         aspect-ratio: 9/16;
     }
@@ -550,6 +547,12 @@ header {
     }
     .projects-textbox {
         width: 90%;
+    }
+}
+
+@media only screen and (min-width:631px) and (max-width: 1024px) {
+   .projects-item {
+        height: 600px;
     }
 }
 
