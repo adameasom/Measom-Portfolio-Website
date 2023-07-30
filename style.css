@@ -502,7 +502,7 @@ header {
     transform: translate(0, -5px);
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 630px) {
     .projects-heading {
         padding-top: 50px;
     }
@@ -539,6 +539,9 @@ header {
 }
 
 @media only screen and (min-width: 631px) and (max-width: 768px) {
+    .projects-item {
+        height: 500px;
+    }
     .projects-img {
         aspect-ratio: 9/16;
     }
@@ -601,7 +604,7 @@ header {
 @media only screen and (min-width: 631px) and (max-width: 1640px) {
     .main-contact-block {
         width: 68%;
-        padding: 40px 60px 100px 60px;
+        padding: 40px 60px;
     }
 }
 
