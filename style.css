@@ -245,7 +245,7 @@ p {
 
 @media only screen and (max-width: 630px) {
     .sidebar-left {
-        padding: 3px 0;
+        padding: 3px 0 0 0;
         bottom: 10px;
         left: calc(50% - 90px); 
     }
