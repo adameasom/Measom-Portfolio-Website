@@ -282,6 +282,7 @@ header {
 
 .loading-hero {
     opacity: 0;
+    filter: blur(5px);
     transform: translateY(-50px); /* Initial position: 50px above its actual position */
 }
 
@@ -329,6 +330,13 @@ header {
 
 .about-block span {
     color: rgb(255, 132, 0);
+}
+
+.loadingAbout {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-500px);
+    transition: 1.5s;
 }
 
 /* Skills Section */
