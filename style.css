@@ -218,6 +218,8 @@ p {
     background-color: rgb(29, 26, 52);
     padding: 0 10px;
     border-radius: 25px;
+    opacity: 0;
+    transform: translateY(50px); /* Initial position: 50px below its actual position */
 }
 
 .social-sidebar li {
@@ -276,6 +278,11 @@ header {
     align-items: center;
     min-height: 100dvh;
     position: relative;
+}
+
+.loading-hero {
+    opacity: 0;
+    transform: translateY(-50px); /* Initial position: 50px above its actual position */
 }
 
 .tag-box {
