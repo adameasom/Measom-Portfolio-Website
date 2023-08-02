@@ -47,6 +47,7 @@ h5 {
 p {
     font-weight: 100;
     letter-spacing: 0.1rem;
+    line-height: 1.5;
 }
 
 .width {
@@ -88,6 +89,7 @@ p {
 .logo {
     font-size: 4rem;
     font-weight: 800;
+    user-select: none;
 }
 
 .logo-link {
@@ -100,6 +102,7 @@ p {
     align-items: flex-end;
     margin-top: 30px;
     font-size: 1.5rem;
+    user-select: none;
 }
 
 .button-1 {
@@ -111,6 +114,7 @@ p {
     text-transform: lowercase;
     text-decoration: none;
     transition: 0.5s;
+    user-select: none;
 }
 
 .nav-button {
@@ -282,7 +286,7 @@ header {
 
 .loading-hero {
     opacity: 0;
-    filter: blur(5px);
+    filter: blur(3px);
     transform: translateY(-50px); /* Initial position: 50px above its actual position */
 }
 
@@ -307,6 +311,12 @@ header {
     bottom: 93px;
 }
 
+.loadingArrow {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateY(-50px); /* Initial position: 50px above its actual position */
+}
+
 /* About Section */
 #About {
     display: flex;
@@ -326,6 +336,7 @@ header {
     font-size: clamp(1rem, 4vw, 7rem);
     font-weight: 500;
     letter-spacing: unset;
+    line-height: unset;
 }
 
 .about-block span {
@@ -334,7 +345,7 @@ header {
 
 .loadingAbout {
     opacity: 0;
-    filter: blur(5px);
+    filter: blur(3px);
     transform: translateX(-500px);
     transition: 1.5s;
 }
@@ -377,6 +388,12 @@ header {
 .skill-item h5 {
     color: rgb(29, 26, 52);
     transition: 0.5s;
+    user-select: none;
+}
+
+.box {
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 .skill-item:hover h5 {
@@ -387,6 +404,8 @@ header {
 .skill-item:hover svg {
     opacity: 0.1;
 }
+
+
 
 @media only screen and (max-width:630px) {
     .skills {
@@ -467,7 +486,6 @@ header {
 
 .projects-text-block {
     width: 45%;
-    aspect-ratio: 16/9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -483,6 +501,7 @@ header {
     padding-left: 40px;
     font-weight: 100;
     letter-spacing: 0.1rem;
+    line-height: 1.5;
 }
 
 .projects-links {
@@ -567,7 +586,7 @@ header {
 
 @media only screen and (min-width:631px) and (max-width: 1024px) {
    .projects-item {
-        height: 600px;
+        height: 650px;
     }
 }
 
