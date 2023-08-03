@@ -411,6 +411,9 @@ header {
     .skills {
         padding-top: 50px;
     }
+    .skill-item {
+        margin-top: 10px;
+    }
     .skill-item h5 {
         color: rgb(233, 215, 179);
         font-weight: 200;
