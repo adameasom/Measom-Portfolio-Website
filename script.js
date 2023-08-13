@@ -57,7 +57,7 @@ function fadeInDiv(entries, observer) {
         divElement.style.filter = 'blur(0)';
         divElement.style.transform = 'translateX(0)'; // Reset the transform to initial state
         observer.unobserve(section);
-      }, 0); // No delay
+      }, 500); // 500ms delay
     }
   });
 }
@@ -66,7 +66,7 @@ function fadeInDiv(entries, observer) {
 const observer = new IntersectionObserver(fadeInDiv, {
   root: null,
   rootMargin: '0px',
-  threshold: 0.7 // Adjust this threshold value to control when the animation starts
+  threshold: 0.5 // Adjust this threshold value to control when the animation starts
 });
 
 // Start observing the section
