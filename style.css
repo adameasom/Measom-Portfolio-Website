@@ -383,7 +383,6 @@ header {
 
 .box {
     opacity: 0;
-    transform: translateY(20px);
 }
 
 .skill-item:hover h5 {

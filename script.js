@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (index >= boxes.length) return;
     const box = boxes[index];
     box.style.transition = `transform ${transitionDuration}ms, opacity ${transitionDuration / 2}ms`;
-    box.style.transform = 'translateY(0)';
     box.style.opacity = '1';
     setTimeout(() => {
       animateBoxes(index + 1);
