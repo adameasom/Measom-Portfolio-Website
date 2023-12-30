@@ -6,11 +6,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const transitionDuration = 1500;
   
     setTimeout(function() {
-      loadingHero.style.transition = `opacity ${transitionDuration}ms, filter ${transitionDuration}ms, transform ${transitionDuration}ms`;
+      loadingHero.style.transition = `opacity ${transitionDuration}ms, filter ${transitionDuration}ms`;
       loadingHero.style.opacity = 1;
       loadingHero.style.filter = "blur(0)";
-      loadingHero.style.transform = "translateY(0)"; // Sliding down to its original position
-    }, 200); // Adding a 200ms delay just for better visual effect, you can adjust this value as desired
+    }, 100); // Add delay for better visual effect, you can adjust this value as desired
 });
 
 

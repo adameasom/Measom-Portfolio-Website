@@ -337,7 +337,6 @@ header {
 .loadingAbout {
     opacity: 0;
     filter: blur(3px);
-    transform: translateY(-50px);
     transition: 1.5s;
 }
 
