@@ -81,9 +81,6 @@ p {
     align-items: flex-start;
     justify-content: space-between;
     padding: 0 30px;
-    height: 0;
-    overflow-y: visible;
-    
 }
 
 .logo {
@@ -159,11 +156,10 @@ p {
 
 @media only screen and (max-width: 630px) {
     .navbar {
-        background-color: rgb(29, 26, 52);
-        height: 63px;
-        padding: 5px 10px 0 10px;
-        border-bottom: 0.5px solid rgb(233, 215, 179);
-        overflow-y: unset;
+        background: linear-gradient(rgba(29, 26, 52, 1.0), rgba(29, 26, 52, 0.9), rgba(29, 26, 52, 0.5), rgba(29 26, 52, 0.01));
+        /* height: 63px; */
+        padding: 5px 10px 100px 10px;
+        /* border-bottom: 0.5px solid rgb(233, 215, 179); */
     }
     .logo {
         font-size: 2rem;
